@@ -42,13 +42,13 @@
 
 </head>
 <body class="bg-blue-100 flex flex-col items-center gap-12">
-    <main class="mx-auto max-w-sm">
-      <section class="mx-7 rounded-lg overflow-hidden shadow-2xl mt-24">
-        <div class="h-[200px] overflow-hidden">
-          <img class="object-cover object-center -translate-y-4" src="images/drawers.jpg" alt="stylish photo of a cabinet with drawers">
+    <main class="mx-auto max-w-sm lg:max-w-3xl">
+      <section class="flex flex-col rounded-lg shadow-2xl mx-7 mt-24 lg:flex-row">
+        <div class="h-[200px] overflow-hidden rounded-t-lg lg:h-full lg:rounded-l-lg">
+          <img class="object-cover -translate-y-4 lg:translate-y-0 lg:object-fill lg:object-left-top" src="images/drawers.jpg" alt="stylish photo of a cabinet with drawers">
         </div>
-        <article class="bg-white">
-          <div class="px-8 pt-10 pb-8">
+        <article class="bg-white rounded-b-lg">
+          <div class="px-8 pt-10 pb-8 lg:px-12 lg:pt-8 lg:pb-6">
             <h1 class="text-blue-400 text-lg font-bold pb-4">
               Shift the overall look and feel by adding these wonderful
               touches to furniture in your home
@@ -59,7 +59,7 @@
               to help you make any room feel complete.
             </p>
           </div>
-          <div class="relative flex items-center justify-between gap-4 px-8 pb-4">
+          <div class="relative flex items-center justify-between gap-4 px-8 pb-4 lg:px-12 lg:pb-8 lg:static">
             <div class="flex items-center gap-4">
               <div class="shrink-0">
                 <img class="rounded-full w-10 h-10" src="images/avatar-michelle.jpg" alt="user avatar">
@@ -69,7 +69,10 @@
                 <span class="text-base text-blue-300">28 Jun 2020</span>
               </div>
             </div>
-            <div x-data="{show: false}">
+            <div
+                  x-data="{show: false}"
+                  class="lg:relative"
+            >
               <button
                     x-on:click="show =  ! show"
                     type="button"
@@ -81,7 +84,7 @@
               <div
                     x-show="show"
                     x-transition.opacity
-                    class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 px-8 py-5 bg-blue-400 text-white">
+                    class="absolute inset-x-0 bottom-0 rounded-b-lg flex items-center justify-between gap-4 px-8 py-5 bg-blue-400 text-white lg:rounded-lg lg:inset-auto">
                 <div class="flex items-center gap-4">
                   <span class="uppercase text-base tracking-[.3em]">Share</span>
                   <div class="flex items-center gap-4">
@@ -93,7 +96,7 @@
                 <button
                       x-on:click="show =  ! show"
                       type="button" title="Share"
-                      class="rounded-full bg-blue-300 text-blue-100 p-2 hover:bg-blue-100 hover:text-blue-300 ease-in-out duration-150"
+                      class="rounded-full bg-blue-300 text-blue-100 p-2 hover:bg-blue-100 hover:text-blue-300 ease-in-out duration-150 lg:hidden"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="currentColor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
                 </button>
